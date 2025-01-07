@@ -51,7 +51,7 @@ app.get('/getAccessToken', async(req, res) => {
     const userData=await userResponse.json();
     const email=userData.email;
     if(!email){
-      res.status(400).send('Email Not Found.Please Public your email in github account');
+      res.status(400).send({success:false, message:'Email Not Found.Please Public your email in github account'});
       return;
     }
     const user=await userModel.findOne({email})
