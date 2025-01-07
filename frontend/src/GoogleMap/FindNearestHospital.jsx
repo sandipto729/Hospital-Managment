@@ -75,6 +75,3 @@ const NearbyHospitals = () => {
 };
 
 export default NearbyHospitals;
-
-
-// AIzaSyAz4i1sQTqFufcnO1mnAZ0gRCwvdn_i0RM

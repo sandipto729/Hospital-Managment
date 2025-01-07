@@ -52,6 +52,7 @@ app.get('/getAccessToken', async(req, res) => {
     const email=userData.email;
     if(!email){
       res.status(400).send('Email Not Found.Please Public your email in github account');
+      return;
     }
     const user=await userModel.findOne({email})
     const newHashPassword=await bcrypt.hash(data.access_token, 10);
