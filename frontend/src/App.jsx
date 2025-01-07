@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 // import AdminPortal from './../../admin/src/main'
+import GoogleMap from './GoogleMap/FindNearestHospital'
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/verify' element={<Verify />} />
         {/* <Route path='/admin' element={<AdminPortal />} /> */}
+        <Route path='/nearest-hospitals' element={<GoogleMap />} />
       </Routes>
       <Footer />
     </div>

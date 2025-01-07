@@ -3,6 +3,8 @@ import { AppContext } from '../context/AppContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
 
@@ -51,10 +53,51 @@ const Login = () => {
     }
   }, [token])
 
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const fetchAccessToken = async () => {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const codeParam = urlParams.get('code');
+      console.log("Code Param:", codeParam);
+
+      if (codeParam) {
+        try {
+          const response = await fetch(`${backendUrl}/getAccessToken?code=${codeParam}`);
+          const data = await response.json();
+          if (data.success) {
+            localStorage.setItem('token', data.token)
+            setToken(data.token)
+          } else {
+            toast.error(data.message)
+          }
+        } catch (error) {
+          console.error("Error fetching access token:", error);
+        }
+      }
+    };
+
+    fetchAccessToken();
+  }, [location, backendUrl]);
+  
+  
+  
+  const loginWithGithub = async () => {
+    window.location.assign(
+      `https://github.com/login/oauth/authorize?client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID}`
+    );
+  };
+  
+
   return (
     <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center'>
       <div className='flex flex-col gap-3 m-auto items-start p-8 min-w-[340px] sm:min-w-96 border rounded-xl text-[#5E5E5E] text-sm shadow-lg'>
         <p className='text-2xl font-semibold'>{state === 'Sign Up' ? 'Create Account' : 'Login'}</p>
+        <p onClick={loginWithGithub} className='flex items-center gap-2 cursor-pointer'>
+          Login with <GitHubIcon/>
+        </p>
         <p>Please {state === 'Sign Up' ? 'sign up' : 'log in'} to book appointment</p>
         {state === 'Sign Up'
           ? <div className='w-full '>
@@ -82,3 +125,7 @@ const Login = () => {
 }
 
 export default Login
+
+
+
+
