@@ -11,7 +11,7 @@ const NearbyHospitals = () => {
   const [currentPosition, setCurrentPosition] = useState(null);
   const [hospitals, setHospitals] = useState([]);
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDa-6sUvXVdQAlBgLoRWL74HWCN1ZLHdWw", // Update with your API key
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,
     libraries,
   });
 
