@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 // import AdminPortal from './../../admin/src/main'
 import GoogleMap from './GoogleMap/FindNearestHospital'
+import JitsiMeet from './VideoChat/Jitsi'
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/verify' element={<Verify />} />
         {/* <Route path='/admin' element={<AdminPortal />} /> */}
         <Route path='/nearest-hospitals' element={<GoogleMap />} />
+        <Route path='/meet' element={<JitsiMeet />} />
       </Routes>
       <Footer />
     </div>
