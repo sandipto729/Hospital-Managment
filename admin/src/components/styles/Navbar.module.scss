@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
+  
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      .logo {
+        width: 10rem;
+        cursor: pointer;
+  
+        @media (min-width: 640px) {
+          width: 12rem;
+        }
+      }
+  
+      .role {
+        border: 1px solid #555;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        color: #ccc;
+        font-size: 0.75rem;
+      }
+    }
+  
+    .logout {
+      background-color: #007acc;
+      color: #fff;
+      font-size: 0.875rem;
+      padding: 0.6rem 2.5rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #005a99;
+      }
+    }
+  }
+  

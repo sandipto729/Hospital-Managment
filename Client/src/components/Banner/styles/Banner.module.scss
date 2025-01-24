@@ -1,0 +1,193 @@
+// /* banner.module.scss */
+
+// .bannerContainer {
+//     display: flex;
+//     background-color: #1c1c1c;
+//     border-radius: 0.5rem;
+//     padding: 1.5rem;
+//     margin: 5rem 0;
+//     @media (min-width: 640px) {
+//       padding-left: 2.5rem;
+//       padding-right: 2.5rem;
+//     }
+//     @media (min-width: 768px) {
+//       padding-left: 3.5rem;
+//       padding-right: 3.5rem;
+//       margin: 5rem 2.5rem;
+//     }
+//     @media (min-width: 1024px) {
+//       padding-left: 3rem;
+//     }
+//   }
+  
+//   .leftContent {
+//     flex: 1;
+//     padding: 2rem 0;
+//     @media (min-width: 640px) {
+//       padding-top: 2.5rem;
+//       padding-bottom: 2.5rem;
+//     }
+//     @media (min-width: 768px) {
+//       padding-top: 4rem;
+//       padding-bottom: 4rem;
+//     }
+//     @media (min-width: 1024px) {
+//       padding-top: 6rem;
+//       padding-bottom: 6rem;
+//       padding-left: 1.25rem;
+//     }
+  
+//     .title {
+//       font-size: 1.25rem;
+//       font-weight: 600;
+//       color: #ffffff;
+  
+//       @media (min-width: 640px) {
+//         font-size: 1.5rem;
+//       }
+//       @media (min-width: 768px) {
+//         font-size: 1.875rem;
+//       }
+//       @media (min-width: 1024px) {
+//         font-size: 3.125rem;
+//       }
+  
+//       .subtitle {
+//         margin-top: 1rem;
+//         font-size: inherit;
+//       }
+//     }
+  
+//     .button {
+//       background-color: #ffffff;
+//       font-size: 0.875rem;
+//       color: #595959;
+//       padding: 0.75rem 2rem;
+//       border-radius: 9999px;
+//       margin-top: 1.5rem;
+//       transition: transform 0.2s ease-in-out;
+  
+//       &:hover {
+//         transform: scale(1.05);
+//       }
+  
+//       @media (min-width: 640px) {
+//         font-size: 1rem;
+//       }
+//     }
+//   }
+  
+//   .rightContent {
+//     display: none;
+  
+//     @media (min-width: 768px) {
+//       display: block;
+//       width: 50%;
+//     }
+//     @media (min-width: 1024px) {
+//       width: 370px;
+//     }
+  
+//     .imageContainer {
+//       position: relative;
+//       .image {
+//         bottom: 0;
+//         right: 0;
+//         width: 100%;
+//         max-width: 20rem;
+//       }
+//     }
+//   }
+  
+
+.bannerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212; /* Dark Background */
+  
+  background-image: url('https://img.freepik.com/free-vector/dark-wavy-colors-background_23-2148403785.jpg?t=st=1737482693~exp=1737486293~hmac=c75a165b43006668fb27689848c6a96c943f89a62bea67d1b85fd4f557caadac&w=1480');
+  // background-image: url('https://img.freepik.com/free-vector/watercolor-galaxy-background_23-2149249700.jpg?t=st=1737482580~exp=1737486180~hmac=2c109d3a3cf7984e228bc6ebca05388ac51c187fa0b9f256d34b0b40cbf57339&w=1480');
+  
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 4rem 0;
+  color: #e0e0e0; /* Light text for contrast */
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 3rem;
+  }
+}
+
+.leftContent {
+  flex: 1;
+  text-align: left;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff; /* Bright white title */
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+
+  .subtitle {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #bdbdbd; /* Subtle gray for the subtitle */
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+
+  .ctaButton {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #1dbf73; /* Bright green for the button */
+    color: #ffffff; /* White text */
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+
+    &:hover {
+      background-color: #16a762; /* Slightly darker green on hover */
+      transform: scale(1.05);
+    }
+  }
+}
+
+.rightContent {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    flex: 1;
+    text-align: right;
+  }
+
+  .bannerImage {
+    width: 100%;
+    max-width: 18rem;
+    border-radius: 0.5rem;
+
+    @media (min-width: 1024px) {
+      max-width: 22rem;
+    }
+
+    /* Add shadow for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+}

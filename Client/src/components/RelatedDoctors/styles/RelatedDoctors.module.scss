@@ -1,0 +1,102 @@
+/* relatedDoctors.module.scss */
+
+.relatedDoctorsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0;
+    color: #ffffff;
+  
+    .title {
+      font-size: 1.875rem;
+      font-weight: 500;
+    }
+  
+    .description {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #b0b0b0;
+  
+      @media (min-width: 640px) {
+        width: 33.33%;
+      }
+    }
+  
+    .gridContainer {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1.25rem;
+  
+      @media (min-width: 640px) {
+        padding: 0;
+      }
+    }
+  
+    .card {
+      border: 1px solid #3a3a3a;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #2a2a2a;
+      transition: transform 0.5s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-10px);
+      }
+  
+      .image {
+        background-color: #3a3a3a;
+        width: 100%;
+        height: auto;
+      }
+  
+      .content {
+        padding: 1rem;
+  
+        .availability {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.875rem;
+          text-align: center;
+  
+          &.available {
+            color: #22c55e;
+  
+            .status {
+              background-color: #22c55e;
+            }
+          }
+  
+          &.notAvailable {
+            color: #9ca3af;
+  
+            .status {
+              background-color: #9ca3af;
+            }
+          }
+  
+          .status {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+          }
+        }
+  
+        .name {
+          font-size: 1.125rem;
+          font-weight: 500;
+          color: #ffffff;
+        }
+  
+        .speciality {
+          font-size: 0.875rem;
+          color: #a3a3a3;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,116 @@
+.container {
+    margin: 20px;
+    color: #e4e4e4; // Text color for dark theme
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #292929;
+    padding: 16px;
+    min-width: 200px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    img {
+      width: 56px;
+    }
+  
+    .info {
+      .count {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+      }
+  
+      .label {
+        color: #aaa;
+      }
+    }
+  }
+  
+  .latestBookings {
+    background-color: #292929;
+    margin-top: 40px;
+    border: 1px solid #333;
+    border-radius: 8px;
+  
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px;
+      border-bottom: 1px solid #444;
+      font-weight: 600;
+      color: #ccc;
+  
+      img {
+        width: 20px;
+      }
+    }
+  
+    .bookingsList {
+      .bookingItem {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 24px;
+        border-bottom: 1px solid #444;
+        color: #ccc;
+  
+        &:hover {
+          background-color: #333;
+        }
+  
+        img {
+          border-radius: 50%;
+          width: 40px;
+        }
+  
+        .details {
+          flex: 1;
+          font-size: 0.875rem;
+  
+          .name {
+            font-weight: 500;
+            color: #fff;
+          }
+  
+          .date {
+            color: #aaa;
+          }
+        }
+  
+        .statusCancelled {
+          color: #f87171;
+          font-size: 0.75rem;
+          font-weight: 500;
+        }
+  
+        .statusCompleted {
+          color: #34d399;
+          font-size: 0.75rem;
+          font-weight: 500;
+        }
+  
+        .cancelIcon {
+          width: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

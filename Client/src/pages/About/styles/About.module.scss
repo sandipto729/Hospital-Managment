@@ -1,0 +1,254 @@
+// /* Variables */
+// $background-dark: #1c1c1c;
+// $text-light: #e0e0e0;
+// $highlight-color: #f5a623;
+// $card-bg-hover: #333333;
+// $transition-speed: 0.3s;
+
+// /* Container Styles */
+// .aboutContainer {
+//   background-color: $background-dark;
+//   color: $text-light;
+//   padding: 20px;
+//   min-height: 100vh;
+// }
+
+// /* Header Section */
+// .aboutHeader {
+//   text-align: center;
+//   font-size: 1.75rem;
+//   padding-top: 20px;
+//   color: $text-light;
+
+//   .highlight {
+//     color: $highlight-color;
+//     font-weight: 600;
+//   }
+// }
+
+// /* About Us Section */
+// .aboutContent {
+//   margin: 40px 0;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 24px;
+
+//   @media (min-width: 768px) {
+//     flex-direction: row;
+//   }
+
+//   .aboutImage {
+//     width: 100%;
+//     max-width: 360px;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+//   }
+
+//   .aboutText {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     gap: 16px;
+//     font-size: 0.9rem;
+
+//     .visionTitle {
+//       font-size: 1.1rem;
+//       font-weight: 600;
+//       color: $highlight-color;
+//     }
+//   }
+// }
+
+// /* Why Choose Us Section */
+// .chooseUsHeader {
+//   font-size: 1.5rem;
+//   margin: 20px 0;
+//   color: $text-light;
+//   text-align: center;
+
+//   .highlight {
+//     color: $highlight-color;
+//     font-weight: 600;
+//   }
+// }
+
+// .featuresContainer {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+
+//   @media (min-width: 768px) {
+//     flex-direction: row;
+//   }
+
+//   .featureCard {
+//     border: 1px solid #444;
+//     padding: 20px;
+//     flex: 1;
+//     text-align: center;
+//     font-size: 0.95rem;
+//     background-color: transparent;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     transition: background-color $transition-speed, color $transition-speed;
+
+//     &:hover {
+//       background-color: $card-bg-hover;
+//       color: $highlight-color;
+//     }
+
+//     b {
+//       font-size: 1rem;
+//       color: $highlight-color;
+//     }
+
+//     p {
+//       color: $text-light;
+//     }
+//   }
+// }
+
+/* Variables */
+/* Variables */
+$primary-blue: #00bcd4;
+$dark-bg: #121212;
+$light-bg: #1e1e1e;
+$text-light: #e0e0e0;
+$highlight-color: #00bcd4;
+$feature-card-bg: #292929;
+$feature-hover-bg: #444444;
+$shadow-color: rgba(0, 0, 0, 0.4);
+$transition-speed: 0.4s;
+
+/* Container Styles */
+.aboutContainer {
+  position: relative; /* Make sure the container is positioned */
+  background: linear-gradient(145deg, $dark-bg, $light-bg);
+  background-image: url('https://img.freepik.com/free-vector/dark-futuristic-wavy-background_23-2148391018.jpg?t=st=1737483214~exp=1737486814~hmac=b905291e52a33b62883638e334e4efa2d87b89630a0ff7a8d58e324437b04de9&w=1480');
+  background-size: cover;
+  background-position: center;
+  color: $text-light;
+  padding: 30px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.aboutContainer::before {
+  content: ''; /* Pseudo-element with no content */
+  position: absolute; /* Absolutely position it over the background */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+  z-index: -1; /* Place it behind the content */
+}
+
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  background: $highlight-color;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+
+  .highlight {
+    color: $text-light;
+    font-style: italic;
+  }
+}
+
+/* About Content Section */
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .aboutImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px $shadow-color;
+    transition: transform $transition-speed;
+
+  }
+
+  .aboutText {
+    max-width: 600px;
+    line-height: 1.8;
+
+    .brandName {
+      background: $highlight-color;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .visionSection {
+      margin-top: 20px;
+
+      b {
+        font-size: 1.5rem;
+        color: $text-light;
+        text-shadow: 1px 1px 5px $shadow-color;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Features Section */
+.featuresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .featureCard {
+    flex: 1;
+    min-width: 240px;
+    padding: 20px;
+    background: $feature-card-bg;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px $shadow-color;
+    cursor: pointer;
+    transition: transform $transition-speed, background-color $transition-speed;
+
+    &:hover {
+      transform: translateY(-10px);
+      background: $feature-hover-bg;
+    }
+
+    b {
+      font-size: 1.3rem;
+      color: $highlight-color;
+      -webkit-background-clip: text;
+      text-shadow: 1px 1px 5px $shadow-color;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: $text-light;
+    }
+  }
+}
