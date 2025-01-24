@@ -1,0 +1,144 @@
+.doctorProfile {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 2rem;
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 1rem;
+    }
+  
+    .image {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background-color: #333;
+    }
+  
+    .imageBg {
+      width: 100%;
+      height: auto;
+    }
+  
+    .info {
+      background-color: #262626;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid #444;
+    }
+  
+    .name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+  
+    .degreeExperience {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #bdbdbd;
+  
+      & button {
+        background-color: #444;
+        color: #fff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+      }
+    }
+  
+    .sectionTitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 1.5rem;
+    }
+  
+    .about {
+      color: #bdbdbd;
+      margin-top: 0.5rem;
+    }
+  
+    .textarea {
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  
+    .fees {
+      font-size: 1rem;
+      color: #fff;
+      margin-top: 1rem;
+  
+      span {
+        font-weight: 500;
+      }
+    }
+  
+    .address {
+      margin-top: 1rem;
+      color: #fff;
+  
+      input {
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+      }
+    }
+  
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+  
+      label {
+        font-size: 0.875rem;
+        color: #bdbdbd;
+      }
+    }
+  
+    .buttonSave {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid #f9a826;
+      border-radius: 1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: #f9a826;
+      color: #fff;
+  
+      &:hover {
+        background-color: #ff9c00;
+      }
+    }
+  
+    .buttonEdit {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid #f9a826;
+      border-radius: 1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: transparent;
+      color: #f9a826;
+  
+      &:hover {
+        background-color: #444;
+      }
+    }
+  }
+  

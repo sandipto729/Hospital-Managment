@@ -1,0 +1,76 @@
+.container {
+    margin: 20px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    color: #e4e4e4; // Light text color for dark theme
+  
+    h1 {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #f4f4f4; // Header text color
+    }
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    
+  }
+  
+  .card {
+    border: 1px solid #4a5568;
+    border-radius: 12px;
+    max-width: 224px; // 56rem in Tailwind
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    img {
+      width: 100%;
+      background-color: #2d3748;
+      transition: background-color 0.5s ease;
+  
+      &:hover {
+        background-color: #1a202c; // Slightly darker background for hover
+      }
+    }
+  
+    .info {
+      padding: 16px;
+  
+      .name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #f4f4f4; // Doctor's name
+      }
+  
+      .speciality {
+        font-size: 0.875rem;
+        color: #a0aec0; // Subdued text color
+      }
+  
+      .availability {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.875rem;
+  
+        input[type='checkbox'] {
+          accent-color: #68d391; 
+          cursor: pointer;
+        }
+  
+        p {
+          color: #f4f4f4;
+        }
+      }
+    }
+  }
+  

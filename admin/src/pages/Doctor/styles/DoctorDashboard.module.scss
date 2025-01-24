@@ -1,0 +1,121 @@
+.dashboardContainer {
+    background-color: #1c1c1c;
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #252525;
+    padding: 15px;
+    min-width: 200px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: pointer;
+  
+    &Icon {
+      width: 50px;
+    }
+  
+    &Value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  
+    &Label {
+      color: #b3b3b3;
+    }
+  
+    &.hoverEffect {
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  .latestBookings {
+    margin-top: 30px;
+    background-color: #252525;
+    border-radius: 8px;
+  
+    &Header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      border-bottom: 1px solid #333;
+    }
+  
+    &Title {
+      font-weight: 600;
+      color: #ffffff;
+    }
+  
+    &List {
+      padding-top: 15px;
+    }
+  
+    .bookingItem {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      border-bottom: 1px solid #333;
+      transition: background-color 0.3s ease-in-out;
+  
+      &:hover {
+        background-color: #2d2d2d;
+      }
+    }
+  
+    .bookingAvatar {
+      width: 40px;
+      border-radius: 50%;
+    }
+  
+    .bookingInfo {
+      flex: 1;
+  
+      &Name {
+        font-weight: 500;
+        color: #ffffff;
+      }
+  
+      &Date {
+        color: #b3b3b3;
+      }
+    }
+  
+    .bookingCancelled {
+      font-size: 0.8rem;
+      color: #e74c3c;
+      font-weight: 500;
+    }
+  
+    .bookingCompleted {
+      font-size: 0.8rem;
+      color: #27ae60;
+      font-weight: 500;
+    }
+  
+    .bookingActions {
+      display: flex;
+      gap: 10px;
+  
+      .actionIcon {
+        width: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  

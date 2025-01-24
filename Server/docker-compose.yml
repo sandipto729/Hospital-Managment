@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile  # This assumes the Dockerfile is named 'Dockerfile' in the same directory as this docker-compose.yml
+    ports:
+      - "4000:4000"  # Exposes port 4000 of the container to port 4000 on your local machine
+    volumes:
+      - .:/app  # Mounts your current directory to the /app directory in the container (useful for development)
+    environment:
+      - NODE_ENV=production  # Set environment variables here
+      - MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority  # Your MongoDB URI
+    depends_on:
+      - backend

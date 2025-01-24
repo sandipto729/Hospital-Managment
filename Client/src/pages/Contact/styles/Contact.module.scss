@@ -1,0 +1,93 @@
+
+
+/* Variables */
+$background-dark: #121212;
+$text-light: #f1f1f1;
+$highlight-color: #00bcd4;
+$button-hover-bg: #333333;
+$transition-speed: 0.4s;
+
+/* Container Styles */
+.contactContainer {
+  background-color: $background-dark;
+  background-image: url('https://img.freepik.com/free-vector/abstract-background-using-dark-shaded-colors_1048-5749.jpg?t=st=1737483373~exp=1737486973~hmac=a5d840f51467762ee57f5238965a32f666fa38555ebd342868a3d8575ee07e2a&w=1060');
+  color: $text-light;
+  padding: 20px;
+  min-height: 80vh;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Header Section */
+.contactHeader {
+  text-align: center;
+  font-size: 2rem;
+  color: $text-light;
+  margin-bottom: 20px;
+
+  .highlight {
+    color: $highlight-color;
+    font-weight: 600;
+  }
+}
+
+/* Contact Content Section */
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .contactImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .contactDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+
+    .sectionTitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $highlight-color;
+    }
+
+    .sectionText {
+      font-size: 1rem;
+      color: $text-light;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .exploreJobsButton {
+      border: 2px solid $highlight-color;
+      padding: 12px 36px;
+      font-size: 1rem;
+      background-color: transparent;
+      color: $highlight-color;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background-color $transition-speed, color $transition-speed;
+
+      &:hover {
+        background-color: $highlight-color;
+        color: $background-dark;
+      }
+    }
+  }
+}
